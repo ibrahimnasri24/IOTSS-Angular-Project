@@ -1,14 +1,21 @@
 import { Note } from './note';
 
 export class Notes {
-  constructor(private notes: Note[]) {}
+  private static notesSingleton: Notes = new Notes([]);
+  private constructor(public notes: Note[]) {}
 
-  AddNote = (
+  static AddNote = (
     title: string,
     content: string,
     creationDate: Date,
     lastEditDate: Date
   ) => {
-    this.notes.push(new Note(title, content, creationDate, lastEditDate));
+    Notes.notesSingleton.notes.push(
+      new Note(title, content, creationDate, lastEditDate)
+    );
+  };
+
+  static getNotes = () => {
+    return Notes.notesSingleton.notes;
   };
 }

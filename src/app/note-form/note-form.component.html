@@ -8,17 +8,14 @@
     placeholder="Enter Title"
     #title="ngModel"
   />
-  <p [hidden]="title.valid">The title must not be empty</p>
   <label for="note">Note Content</label>
   <input
     type="text"
     name="note"
     [(ngModel)]="noteContent"
-    required
     placeholder="Enter Note Content"
     #note="ngModel"
   />
-  <p [hidden]="note.valid">The note content must not be empty</p>
   <button (click)="addNote()">Add Note</button>
   <button>Cancel</button>
 </form>

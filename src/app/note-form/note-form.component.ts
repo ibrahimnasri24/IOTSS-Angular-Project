@@ -7,16 +7,14 @@ import { Notes } from '../model/notes';
   styleUrls: ['./note-form.component.css'],
 })
 export class NoteFormComponent implements OnInit {
-  nts: Notes = new Notes([]);
-
   noteTitle: string = '';
   noteContent: string = '';
 
   constructor() {}
 
   addNote = () => {
-    this.nts.AddNote(this.noteTitle, this.noteContent, new Date(), new Date());
-    console.log(this.nts);
+    Notes.AddNote(this.noteTitle, this.noteContent, new Date(), new Date());
+    console.log(Notes.getNotes());
   };
 
   ngOnInit(): void {}

@@ -6,6 +6,7 @@ import { NoteFormComponent } from './note-form/note-form.component';
 import { NoteCardComponent } from './note-card/note-card.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
+import { NotesContainerComponent } from './notes-container/notes-container.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { HomeComponent } from './home/home.component';
     NoteFormComponent,
     NoteCardComponent,
     HomeComponent,
+    NotesContainerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

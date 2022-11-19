@@ -13,9 +13,10 @@ export class Notes {
     Notes.notesSingleton.notes.push(
       new Note(title, content, creationDate, lastEditDate)
     );
+    localStorage.setItem('notes', JSON.stringify(Notes.notesSingleton.notes));
   };
 
   static getNotes = () => {
-    return Notes.notesSingleton.notes;
+    return JSON.parse(<string>localStorage.getItem('notes'));
   };
 }

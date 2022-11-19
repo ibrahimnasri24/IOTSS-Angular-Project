@@ -1,0 +1,26 @@
+.edit-icon {
+  font-size: var(--xl);
+  color: var(--light);
+}
+
+.link {
+  text-decoration: none;
+}
+
+.edit-icon-circle {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--dark);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.edit-icon-container {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  padding: 3rem;
+}

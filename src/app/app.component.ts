@@ -1,18 +1,27 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AppRoutingModule } from './app-routing.module';
-import { NoteFormComponent } from './note-form/note-form.component';
+import {
+  collectionData,
+  Firestore,
+  collection,
+  DocumentData,
+} from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
+
+interface Item {
+  name: string;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  constructor(private router: Router) {}
-  title = 'webProject';
-  login() {
-    console.log('logged in');
-
-    this.router.navigateByUrl('home');
+  item$: Observable<DocumentData>;
+  constructor(private router: Router, private firestore: Firestore) {
+    const col = collection(firestore, 'items');
+    this.item$ = collectionData(col);
+    console.log(this.item$);
   }
 }

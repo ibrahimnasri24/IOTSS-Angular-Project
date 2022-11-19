@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-iotss": {
+      "hosting": {
+        "webProject": [
+          "angular-iotss"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-iotss"
+  }
+}

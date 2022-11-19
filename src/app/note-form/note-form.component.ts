@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Note } from '../model/note';
+import { Router } from '@angular/router';
 import { Notes } from '../model/notes';
 @Component({
   selector: 'app-note-form',
@@ -10,11 +10,14 @@ export class NoteFormComponent implements OnInit {
   noteTitle: string = '';
   noteContent: string = '';
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   addNote = () => {
-    Notes.AddNote(this.noteTitle, this.noteContent, new Date(), new Date());
-    console.log(Notes.getNotes());
+    if (this.noteTitle == '') {
+    } else {
+      Notes.AddNote(this.noteTitle, this.noteContent, new Date(), new Date());
+      this.router.navigate(['']);
+    }
   };
 
   ngOnInit(): void {}

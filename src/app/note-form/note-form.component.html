@@ -1,6 +1,6 @@
-<form>
-  <label for="title">Note Title</label>
+<form class="note-form">
   <input
+    class="note-input note-input-title"
     type="text"
     name="title"
     [(ngModel)]="noteTitle"
@@ -8,14 +8,18 @@
     placeholder="Enter Title"
     #title="ngModel"
   />
-  <label for="note">Note Content</label>
-  <input
+  <textarea
+    class="note-input note-text-area"
     type="text"
     name="note"
     [(ngModel)]="noteContent"
     placeholder="Enter Note Content"
     #note="ngModel"
-  />
-  <button (click)="addNote()">Add Note</button>
-  <button>Cancel</button>
+  ></textarea>
+  <div class="icon-container">
+    <a routerLink="" class="delete-icon">Cancel</a>
+    <button (click)="addNote()" class="note-button">
+      <i class="material-symbols-outlined done-icon"> done </i>
+    </button>
+  </div>
 </form>

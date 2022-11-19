@@ -1,8 +1,24 @@
-<h1>Note Title</h1>
-<input type ="text" name="title" [(ngModel)]="nt.title" required #title="ngModel">
-<p [hidden]="title.valid"> the tile must not be empty</p>
-<h2>Note Content</h2>
-<input type="text" name="note" [(ngModel)]="nt.note" required #note="ngModel">
-<p [hidden]="note.valid">the note content must not be empty </p>
-<button>Add Note</button>
-<button>Cancel</button>
+<form>
+  <label for="title">Note Title</label>
+  <input
+    type="text"
+    name="title"
+    [(ngModel)]="noteTitle"
+    required
+    placeholder="Enter Title"
+    #title="ngModel"
+  />
+  <p [hidden]="title.valid">The title must not be empty</p>
+  <label for="note">Note Content</label>
+  <input
+    type="text"
+    name="note"
+    [(ngModel)]="noteContent"
+    required
+    placeholder="Enter Note Content"
+    #note="ngModel"
+  />
+  <p [hidden]="note.valid">The note content must not be empty</p>
+  <button (click)="addNote()">Add Note</button>
+  <button>Cancel</button>
+</form>

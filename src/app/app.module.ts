@@ -6,6 +6,7 @@ import { NoteFormComponent } from './note-form/note-form.component';
 import { NoteCardComponent } from './note-card/note-card.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { FormsModule } from '@angular/forms';
     NoteFormComponent,
     NoteCardComponent,
     MainpageComponent,
+    HomeComponent,
     
   ],
   imports: [

@@ -1,11 +1,8 @@
-export class Note{
-    title : string 
-    note : string 
-
-    constructor(title : string , note : string ){
-
-        this.title = title ;
-        this.note= note;
-    }
-
+export class Note {
+  constructor(
+    public title: string,
+    public note: string,
+    public creationDate: Date,
+    public lastEdittDate: Date
+  ) {}
 }

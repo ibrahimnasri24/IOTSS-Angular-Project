@@ -8,9 +8,6 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { NotesContainerComponent } from './notes-container/notes-container.component';
 import { AddNoteComponent } from './add-note/add-note.component';
-import { provideFirestore, getFirestore } from '@angular/fire/firestore';
-import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
-import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -21,13 +18,7 @@ import { environment } from '../environments/environment';
     NotesContainerComponent,
     AddNoteComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore()),
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

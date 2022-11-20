@@ -8,8 +8,12 @@
   border-radius: 1rem;
   padding: 1rem;
   aspect-ratio: 1 / 1;
-  max-width: 300px;
+  width: 300px;
   transition: all 0.5s;
+}
+
+.note-card-editing {
+  width: 400px;
 }
 
 .inputs-contanier {
@@ -17,10 +21,6 @@
   flex-direction: column;
   width: 95%;
   height: 90%;
-}
-
-.note-card-editing {
-  max-width: 1000px;
 }
 
 .note-title {

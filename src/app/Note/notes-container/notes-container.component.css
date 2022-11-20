@@ -1,6 +1,8 @@
 .notes-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
+  /* display: grid;
+  grid-template-columns: auto auto auto auto; */
+  display: flex;
+  flex-wrap: wrap;
   margin: 1rem 1rem;
   gap: 1rem;
 }

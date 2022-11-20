@@ -28,8 +28,16 @@ export class NoteCardComponent implements OnInit {
     this.editingMode = true;
   };
 
-  editOFF = () => {
+  finishedEditing = () => {
     this.editingMode = false;
+    Notes.deleteNote(this.note.id);
+    Notes.AddNote(
+      this.note.title,
+      this.note.note,
+      this.note.creationDate,
+      new Date(),
+      this.note.color
+    );
   };
 
   delete = (id: Number) => {

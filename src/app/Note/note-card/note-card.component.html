@@ -14,7 +14,7 @@
   <i
     *ngIf="editingMode"
     class="material-symbols-outlined delete-icon"
-    (click)="editOFF()"
+    (click)="finishedEditing()"
   >
     done
   </i>
@@ -24,12 +24,12 @@
       type="text"
       name="title"
       class="note-title"
-      [defaultValue]="note.title"
+      [(ngModel)]="note.title"
     />
     <textarea
       [disabled]="!editingMode"
       class="note-content"
-      [defaultValue]="note.note"
+      [(ngModel)]="note.note"
     ></textarea>
   </div>
   <app-color-picker

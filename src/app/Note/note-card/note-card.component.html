@@ -2,6 +2,7 @@
   class="note-card"
   [style.--bg-color]="note.color.backgroundColor"
   [style.--text-color]="note.color.textColor"
+  [style.--font-style]="note.font.name" 
 >
   <i class="material-symbols-outlined delete-icon" (click)="delete(note.id)">
     delete
@@ -12,4 +13,8 @@
     [noteId]="note.id"
     (colorChanged)="onColorChange($event)"
   ></app-color-picker>
+  <!-- <app-font-picker [noteId]="note.id" 
+  (fontChanged)="onFontChange($event)">
+    
+  </app-font-picker>-->
 </div>

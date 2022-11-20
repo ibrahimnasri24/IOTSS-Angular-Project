@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FontPickerComponent } from '../font-picker/font-picker.component';
 import { NoteCardComponent } from './note-card.component';
 
 describe('NoteCardComponent', () => {

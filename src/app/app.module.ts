@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { NotesContainerComponent } from './Note/notes-container/notes-container.component';
 import { AddNoteComponent } from './add-note/add-note.component';
 import { ColorPickerComponent } from './Note/color-picker/color-picker.component';
+import { FontPickerComponent } from './Note/font-picker/font-picker.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ColorPickerComponent } from './Note/color-picker/color-picker.component
     NotesContainerComponent,
     AddNoteComponent,
     ColorPickerComponent,
+    FontPickerComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

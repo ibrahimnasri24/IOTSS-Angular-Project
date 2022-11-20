@@ -1,5 +1,6 @@
 import { Color, Colors } from './colors';
 import { Notes } from './notes';
+import {Font,Fonts} from './fonts'
 
 export class Note {
   public constructor(
@@ -8,10 +9,14 @@ export class Note {
     public note: string,
     public creationDate: Date,
     public lastEdittDate: Date,
-    public color: Color
+    public color: Color,
+    public font : Font ,
   ) {}
 
   public changeColor = (colorId: Number) => {
     this.color = Colors.getColor(colorId);
+  };
+  public changeFont = (fontId: Number) => {
+    this.font = Fonts.getFont(fontId);
   };
 }

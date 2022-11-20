@@ -2,6 +2,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Colors } from 'src/app/model/colors';
 import { Note } from '../../model/note';
 import { Notes } from '../../model/notes';
+import { Fonts } from 'src/app/model/fonts';
+import { FontPickerComponent } from '../font-picker/font-picker.component';
 
 @Component({
   selector: 'app-note-card',
@@ -15,7 +17,8 @@ export class NoteCardComponent implements OnInit {
     '',
     new Date(),
     new Date(),
-    Colors.getRandomColor()
+    Colors.getRandomColor(),
+    Fonts.getRandomFont(),
   );
   constructor() {}
 
@@ -28,6 +31,9 @@ export class NoteCardComponent implements OnInit {
   };
 
   onColorChange(nt: Note) {
+    this.note = nt;
+  }
+  onFontChange(nt: Note) {
     this.note = nt;
   }
 

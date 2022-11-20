@@ -9,6 +9,7 @@
   padding: 1rem;
   aspect-ratio: 1 / 1;
   max-width: 300px;
+  font-family: var(--text-style) ;
 }
 
 .delete-icon {

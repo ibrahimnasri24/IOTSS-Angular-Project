@@ -17,7 +17,7 @@ export class ColorPickerComponent implements OnInit {
   constructor() {}
 
   openColorPicker = () => {
-    this.maxW = '120px';
+    this.maxW = '150px';
   };
 
   closeColorPicker = () => {

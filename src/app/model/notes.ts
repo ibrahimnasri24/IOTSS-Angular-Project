@@ -86,4 +86,19 @@ export class Notes {
     );
     localStorage.setItem('notes', JSON.stringify(Notes.notesSingleton.notes));
   };
+  public static editNote = (id: Number, title: string, content: string) => {
+    Notes.notesSingleton = new Notes(
+      Notes.notesSingleton.notes.map((note) => {
+        if (note.id === id) {
+          note.title = title;
+          note.note = content;
+          note.lastEdittDate = new Date();
+          return note;
+        }
+        return note;
+      })
+    );
+    localStorage.setItem('notes', JSON.stringify(Notes.notesSingleton.notes));
+  };
+
 }

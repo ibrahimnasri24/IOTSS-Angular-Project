@@ -25,6 +25,17 @@ export class NoteCardComponent implements OnInit {
   @Output()
   noteDeleted: EventEmitter<Note[]> = new EventEmitter<Note[]>();
 
+  editingMode: Boolean = false;
+
+  editON = () => {
+    this.editingMode = true;
+  };
+
+  finishedEditing = () => {
+    this.editingMode = false;
+    Notes.editNote(this.note.id, this.note.title, this.note.note);
+  };
+
   delete = (id: Number) => {
     Notes.deleteNote(id);
     this.noteDeleted.emit(Notes.getNotes());

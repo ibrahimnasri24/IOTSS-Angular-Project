@@ -1,14 +1,38 @@
 <div
   class="note-card"
+  [ngClass]="editingMode == true ? 'note-card-editing' : ''"
   [style.--bg-color]="note.color.backgroundColor"
   [style.--text-color]="note.color.textColor"
   [style.--font-style]="note.font.name" 
 >
-  <i class="material-symbols-outlined delete-icon" (click)="delete(note.id)">
+  <i
+    *ngIf="!editingMode"
+    class="material-symbols-outlined delete-icon"
+    (click)="delete(note.id)"
+  >
     delete
   </i>
-  <h1 class="note-title">{{ note.title }}</h1>
-  <p class="note-content">{{ note.note }}</p>
+  <i
+    *ngIf="editingMode"
+    class="material-symbols-outlined delete-icon"
+    (click)="finishedEditing()"
+  >
+    done
+  </i>
+  <div (click)="editON()" class="inputs-contanier">
+    <input
+      [disabled]="!editingMode"
+      type="text"
+      name="title"
+      class="note-title"
+      [(ngModel)]="note.title"
+    />
+    <textarea
+      [disabled]="!editingMode"
+      class="note-content"
+      [(ngModel)]="note.note"
+    ></textarea>
+  </div>
   <app-color-picker
     [noteId]="note.id"
     (colorChanged)="onColorChange($event)"

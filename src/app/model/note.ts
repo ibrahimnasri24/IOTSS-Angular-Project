@@ -19,4 +19,5 @@ export class Note {
   public changeFont = (fontId: Number) => {
     this.font = Fonts.getFont(fontId);
   };
+  
 }

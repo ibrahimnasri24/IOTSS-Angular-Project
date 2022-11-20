@@ -21,7 +21,7 @@
   width: fit-content;
   max-width: var(--max-w);
   overflow: hidden;
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 
 .color-picker-open {

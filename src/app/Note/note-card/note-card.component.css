@@ -8,8 +8,50 @@
   border-radius: 1rem;
   padding: 1rem;
   aspect-ratio: 1 / 1;
-  max-width: 300px;
+  width: 300px;
+  transition: all 0.5s;
   font-family: var(--text-style) ;
+}
+
+.note-card-editing {
+  width: 400px;
+}
+
+.inputs-contanier {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  height: 90%;
+}
+
+.note-title {
+  background-color: transparent;
+  border: none;
+  font-size: var(--lg);
+  color: var(--text-color);
+}
+
+.note-title:disabled {
+  color: var(--text-color);
+}
+
+.note-content {
+  background-color: transparent;
+  border: none;
+  font-size: var(--md);
+  color: var(--text-color);
+  height: 80%;
+}
+
+.note-content:focus,
+.note-title:focus {
+  background-color: transparent;
+  outline: none;
+  border: 0px;
+}
+
+.note-content:disabled {
+  color: var(--text-color);
 }
 
 .delete-icon {

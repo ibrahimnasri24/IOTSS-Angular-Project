@@ -3,6 +3,12 @@ const colorPalette = [
   { id: 1, bg: '#CFF5E7', text: '#0D4C92' },
   { id: 2, bg: '#497174', text: '#EB6440' },
   { id: 3, bg: '#94B49F', text: '#76549A' },
+  { id:4 , bg: '#E5D0D0', text: '#210202'},
+  {id: 5 , bg : '#98e19d', text: '#150200'},
+  {id: 6 , bg : '#9d5645', text: '#e9dfdd'},
+  {id: 7 , bg : '#CFD5EB', text: '#020234'},
+
+
 ];
 
 export class Color {

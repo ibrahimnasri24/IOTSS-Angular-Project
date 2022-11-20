@@ -1,3 +1,7 @@
 <div class="notes-container">
-  <app-note-card *ngFor="let note of notes" [note]="note"></app-note-card>
+  <app-note-card
+    *ngFor="let note of notes"
+    [note]="note"
+    (noteDeleted)="onNoteDeleted($event)"
+  ></app-note-card>
 </div>

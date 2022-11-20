@@ -1,4 +1,7 @@
 <div class="note-card">
+  <i class="material-symbols-outlined delete-icon" (click)="delete(note.id)">
+    delete
+  </i>
   <h1 class="note-title">{{ note.title }}</h1>
   <p class="note-content">{{ note.note }}</p>
 </div>

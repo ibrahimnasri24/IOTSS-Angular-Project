@@ -10,3 +10,12 @@
   aspect-ratio: 1 / 1;
   max-width: 300px;
 }
+
+.delete-icon {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 1rem;
+  font-size: var(--xl);
+  cursor: pointer;
+}

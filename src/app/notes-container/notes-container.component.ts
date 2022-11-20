@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Note } from '../model/note';
 import { Notes } from '../model/notes';
 
@@ -7,10 +7,10 @@ import { Notes } from '../model/notes';
   templateUrl: './notes-container.component.html',
   styleUrls: ['./notes-container.component.css'],
 })
-export class NotesContainerComponent implements OnInit {
+export class NotesContainerComponent {
   notes: Note[] = Notes.getNotes();
 
-  constructor() {}
-
-  ngOnInit(): void {}
+  onNoteDeleted(notes: Note[]) {
+    this.notes = notes;
+  }
 }

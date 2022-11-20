@@ -8,5 +8,8 @@
   </i>
   <h1 class="note-title">{{ note.title }}</h1>
   <p class="note-content">{{ note.note }}</p>
-  <app-color-picker></app-color-picker>
+  <app-color-picker
+    [noteId]="note.id"
+    (colorChanged)="onColorChange($event)"
+  ></app-color-picker>
 </div>

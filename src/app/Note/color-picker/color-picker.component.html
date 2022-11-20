@@ -1,4 +1,8 @@
-<div class="container" (mouseenter)="openColorPicker()" (mouseleave)="closeColorPicker()">
+<div
+  class="container"
+  (mouseenter)="openColorPicker()"
+  (mouseleave)="closeColorPicker()"
+>
   <i class="material-symbols-outlined delete-icon"> palette </i>
   <div class="color-picker-container" [style.--max-w]="maxW">
     <div
@@ -6,6 +10,7 @@
       *ngFor="let color of colors"
       class="color-option"
       [style.--bg-color]="color.backgroundColor"
+      (click)="changeColor(color.id)"
     ></div>
   </div>
 </div>

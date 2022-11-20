@@ -30,8 +30,6 @@ export class Colors {
   }
 
   public static getRandomColor = () => {
-    console.log(Colors.cols.colors);
-
     return Colors.cols.colors[
       Math.floor(Math.random() * Colors.cols.colors.length)
     ];
@@ -41,7 +39,7 @@ export class Colors {
     return Colors.cols.colors;
   };
 
-  public getColor = (id: Number) => {
-    return Colors.cols.colors.find((col) => col.id === id);
+  public static getColor = (id: Number) => {
+    return <Color>Colors.cols.colors.find((col) => col.id === id);
   };
 }

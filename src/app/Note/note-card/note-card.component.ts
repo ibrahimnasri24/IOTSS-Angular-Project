@@ -10,6 +10,7 @@ import { Notes } from '../../model/notes';
 })
 export class NoteCardComponent implements OnInit {
   @Input('note') note: Note = new Note(
+    0,
     '',
     '',
     new Date(),
@@ -25,6 +26,10 @@ export class NoteCardComponent implements OnInit {
     Notes.deleteNote(id);
     this.noteDeleted.emit(Notes.getNotes());
   };
+
+  onColorChange(nt: Note) {
+    this.note = nt;
+  }
 
   ngOnInit(): void {}
 }

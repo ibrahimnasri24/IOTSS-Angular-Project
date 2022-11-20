@@ -1,6 +1,6 @@
 import { Color } from './colors';
 import { Note } from './note';
-import {Font} from './fonts';
+import { Font } from './fonts';
 
 export class Notes {
   private notes: Note[];
@@ -21,7 +21,7 @@ export class Notes {
           nt.creationDate,
           nt.lastEdittDate,
           nt.color,
-          nt.font,
+          nt.font
         );
       });
     }
@@ -33,7 +33,7 @@ export class Notes {
     creationDate: Date,
     lastEditDate: Date,
     color: Color,
-    font : Font
+    font: Font
   ) => {
     Notes.notesSingleton.notes.push(
       new Note(
@@ -74,7 +74,7 @@ export class Notes {
     );
     localStorage.setItem('notes', JSON.stringify(Notes.notesSingleton.notes));
   };
-  public static changeFont = (noteId: Number, fontId: Number) => {
+  public static changeFont = (noteId: Number, fontId: number) => {
     Notes.notesSingleton = new Notes(
       Notes.notesSingleton.notes.map((note) => {
         if (note.id === noteId) {
@@ -100,5 +100,4 @@ export class Notes {
     );
     localStorage.setItem('notes', JSON.stringify(Notes.notesSingleton.notes));
   };
-
 }

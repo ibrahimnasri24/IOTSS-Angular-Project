@@ -1,16 +1,3 @@
-<div
-  class="container"
-  (mouseenter)="openFontPicker()"
-  (mouseleave)="closeFontPicker()"
->
-  <i class="material-symbols-outlined delete-icon"> palette </i>
-  <div class="font-picker-container" [style.--max-w]="maxW">
-    <div
-      value=""
-      *ngFor="let font of fonts"
-      class="font-option"
-      
-      (click)="changeFont(font.id)"
-    ></div>
-  </div>
-</div>
+<button class="container" (click)="nextFont()">
+  <i class="material-symbols-outlined delete-icon"> title </i>
+</button>

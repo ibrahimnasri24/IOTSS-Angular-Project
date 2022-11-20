@@ -47,3 +47,7 @@
   border-radius: 999px;
   background-color: var(--bg-color);
 }
+
+.color-option:hover {
+  outline: solid 1px black;
+}

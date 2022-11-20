@@ -8,13 +8,16 @@
   border-radius: 1rem;
   padding: 1rem;
   aspect-ratio: 1 / 1;
-  width: 300px;
   transition: all 0.5s;
   font-family: var(--text-style) ;
 }
 
+.note-card-w {
+  width: 19vw;
+}
+
 .note-card-editing {
-  width: 400px;
+  width: 30vw;
 }
 
 .inputs-contanier {
@@ -61,4 +64,34 @@
   padding: 1rem;
   font-size: var(--xl);
   cursor: pointer;
+}
+
+@media only screen and (max-width: 980px) {
+  .note-card-w {
+    width: 25vw;
+  }
+
+  .note-card-editing {
+    width: 40vw;
+  }
+}
+
+@media only screen and (max-width: 705px) {
+  .note-card-w {
+    width: 38vw;
+  }
+
+  .note-card-editing {
+    width: 38vw;
+  }
+}
+
+@media only screen and (max-width: 605px) {
+  .note-card-w {
+    width: 80vw;
+  }
+
+  .note-card-editing {
+    width: 80vw;
+  }
 }

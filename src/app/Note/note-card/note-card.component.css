@@ -2,8 +2,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: var(--darker);
-  color: var(--lighter);
+  background-color: var(--bg-color);
+  color: var(--text-color);
   box-shadow: 3px 3px 3px rgb(0, 0, 0, 0.2);
   border-radius: 1rem;
   padding: 1rem;

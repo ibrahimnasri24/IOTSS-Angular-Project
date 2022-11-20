@@ -3,11 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoteFormComponent } from './note-form/note-form.component';
-import { NoteCardComponent } from './note-card/note-card.component';
+import { NoteCardComponent } from './Note/note-card/note-card.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
-import { NotesContainerComponent } from './notes-container/notes-container.component';
+import { NotesContainerComponent } from './Note/notes-container/notes-container.component';
 import { AddNoteComponent } from './add-note/add-note.component';
+import { ColorPickerComponent } from './Note/color-picker/color-picker.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { AddNoteComponent } from './add-note/add-note.component';
     HomeComponent,
     NotesContainerComponent,
     AddNoteComponent,
+    ColorPickerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

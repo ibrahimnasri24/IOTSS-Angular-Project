@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Note } from '../model/note';
-import { Notes } from '../model/notes';
+import { Note } from '../../model/note';
+import { Notes } from '../../model/notes';
 
 @Component({
   selector: 'app-notes-container',

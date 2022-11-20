@@ -1,7 +1,12 @@
-<div class="note-card">
+<div
+  class="note-card"
+  [style.--bg-color]="note.color.backgroundColor"
+  [style.--text-color]="note.color.textColor"
+>
   <i class="material-symbols-outlined delete-icon" (click)="delete(note.id)">
     delete
   </i>
   <h1 class="note-title">{{ note.title }}</h1>
   <p class="note-content">{{ note.note }}</p>
+  <!-- <p>{{ note.color.backgroundColor }}</p> -->
 </div>

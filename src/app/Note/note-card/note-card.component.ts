@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Note } from '../model/note';
-import { Notes } from '../model/notes';
+import { Colors } from 'src/app/model/colors';
+import { Note } from '../../model/note';
+import { Notes } from '../../model/notes';
 
 @Component({
   selector: 'app-note-card',
@@ -8,7 +9,13 @@ import { Notes } from '../model/notes';
   styleUrls: ['./note-card.component.css'],
 })
 export class NoteCardComponent implements OnInit {
-  @Input('note') note: Note = new Note('', '', new Date(), new Date());
+  @Input('note') note: Note = new Note(
+    '',
+    '',
+    new Date(),
+    new Date(),
+    Colors.getRandomColor()
+  );
   constructor() {}
 
   @Output()

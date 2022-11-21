@@ -18,7 +18,7 @@ export class NoteCardComponent implements OnInit {
     new Date(),
     new Date(),
     Colors.getRandomColor(),
-    Fonts.getRandomFont(),
+    Fonts.getRandomFont()
   );
   constructor() {}
 

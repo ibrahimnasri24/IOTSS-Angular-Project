@@ -16,22 +16,18 @@ export class FontPickerComponent implements OnInit {
 
   constructor() {}
 
-  openFontPicker = () => {
-    this.maxW = '300px';
-  };
-
-  closeFontPicker = () => {
-    this.maxW = '0px';
-  };
-
   @Output()
   fontChanged: EventEmitter<Note> = new EventEmitter<Note>();
 
-  changeFont = (id: Number) => {
-    Notes.changeFont(this.noteId, id);
-    this.fontChanged.emit(
-      Notes.getNotes().find((nt) => nt.id === this.noteId)
+  nextFont = () => {
+    const nt: Note | undefined = Notes.getNotes().find(
+      (nt) => nt.id === this.noteId
     );
+    if (!nt) {
+      return;
+    }
+    Notes.changeFont(this.noteId, (nt.font.id + 1) % Fonts.fontCount);
+    this.fontChanged.emit(Notes.getNotes().find((nt) => nt.id === this.noteId));
   };
 
   ngOnInit(): void {}

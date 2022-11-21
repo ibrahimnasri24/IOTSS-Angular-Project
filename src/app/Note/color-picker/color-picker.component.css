@@ -9,6 +9,7 @@
   gap: 0.25rem;
   flex-direction: row-reverse;
   cursor: pointer;
+  z-index: 20;
 }
 
 .color-picker-container {
@@ -30,13 +31,8 @@
   background: white;
   border-radius: 0.5rem;
   width: fit-content;
-  max-width: 250px;
   overflow: hidden;
   transition: all 0.3s;
-}
-
-#cpc.group:hover {
-  max-width: 200px;
 }
 
 .color-option {

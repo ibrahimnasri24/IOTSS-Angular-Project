@@ -1,9 +1,11 @@
+<!-- [style.--font-style]="note.font.name" -->
 <div
   class="note-card"
   [ngClass]="editingMode == true ? 'note-card-editing' : ''"
   [style.--bg-color]="note.color.backgroundColor"
   [style.--text-color]="note.color.textColor"
-  [style.--font-style]="note.font.name" 
+  
+
 >
   <i
     *ngIf="!editingMode"
@@ -37,8 +39,8 @@
     [noteId]="note.id"
     (colorChanged)="onColorChange($event)"
   ></app-color-picker>
-  <!-- <app-font-picker [noteId]="note.id" 
+  <!-- <app-font-picker> [noteId]="note.id" 
   (fontChanged)="onFontChange($event)">
     
-  </app-font-picker>-->
+</app-font-picker>  -->
 </div>

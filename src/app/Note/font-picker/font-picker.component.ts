@@ -17,7 +17,7 @@ export class FontPickerComponent implements OnInit {
   constructor() {}
 
   openFontPicker = () => {
-    this.maxW = '150px';
+    this.maxW = '300px';
   };
 
   closeFontPicker = () => {

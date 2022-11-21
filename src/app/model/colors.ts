@@ -34,6 +34,7 @@ export class Colors {
       Math.floor(Math.random() * Colors.cols.colors.length)
     ];
   };
+  
 
   public static getColors = () => {
     return Colors.cols.colors;

@@ -8,7 +8,7 @@
   margin-bottom: auto;
   margin-right: auto;
   margin-left: auto;
-  background-color: var(--darker);
+  background-color: var(--bg-color);
   padding: 3rem;
   border-radius: 1rem;
   font-family : var(--font-style),

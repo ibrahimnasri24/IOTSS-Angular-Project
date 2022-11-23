@@ -4,6 +4,7 @@ import { Color, Colors } from '../model/colors';
 import { Font,Fonts } from '../model/fonts';
 import { Notes } from '../model/notes';
 import { Note } from '../model/note';
+import { ColorPickerFormComponent } from '../Note/color-picker-form/color-picker-form.component';
 import { getLocaleDateFormat } from '@angular/common';
 
 
@@ -51,8 +52,8 @@ export class NoteFormComponent implements OnInit {
       this.router.navigate(['']);
     }
   };
-  onColorChange(nt: Note) {
-    this.note = nt;
+  onColorChange(clr : Color) {
+    this.color = clr;
   }
 
   ngOnInit(): void {}

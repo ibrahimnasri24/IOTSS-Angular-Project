@@ -10,7 +10,7 @@
       *ngFor="let color of colors"
       class="color-option"
       [style.--bg-color]="color.backgroundColor"
-      (click)="changeColor(color.id)"
+      (click)="getColor(color.id)"
     ></div>
   </div>
 </div>

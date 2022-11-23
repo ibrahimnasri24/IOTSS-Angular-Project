@@ -10,6 +10,7 @@
   flex-direction: row-reverse;
   cursor: pointer;
   z-index: 20;
+  
 }
 
 .color-picker-container {

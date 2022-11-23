@@ -1,15 +1,17 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Colors } from 'src/app/model/colors';
+import { Color } from 'src/app/model/colors';
+
 import { Note } from 'src/app/model/note';
 import { Notes } from 'src/app/model/notes';
 
 @Component({
-  selector: 'app-color-picker',
-  templateUrl: './color-picker.component.html',
-  styleUrls: ['./color-picker.component.css'],
+  selector: 'app-color-picker-form',
+  templateUrl: './color-picker-form.component.html',
+  styleUrls: ['./color-picker-form.component.css'],
 })
-export class ColorPickerComponent implements OnInit {
-  @Input('noteId') noteId: Number = 0;
+export class ColorPickerFormComponent implements OnInit {
+  @Input('colorId') colorId: Number=0;
 
   colors = Colors.getColors();
   maxW: string = '0px';
@@ -25,13 +27,14 @@ export class ColorPickerComponent implements OnInit {
   };
 
   @Output()
-  colorChanged: EventEmitter<Note> = new EventEmitter<Note>();
+  colorChanged: EventEmitter<Color> = new EventEmitter<Color>();
 
-  changeColor = (id: Number) => {
-    Notes.changeColor(this.noteId, id);
+  getColor = (id: Number) => {
+    Colors.getColor(this.colorId);
     this.colorChanged.emit(
-      Notes.getNotes().find((nt) => nt.id === this.noteId)
+      Colors.getColors().find((color) => color.id === this.colorId)
     );
+    
   };
 
   ngOnInit(): void {}

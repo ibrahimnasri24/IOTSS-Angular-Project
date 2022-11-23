@@ -1,6 +1,5 @@
-
 <form class="note-form"
-
+[style.--bg-color]="color.backgroundColor"
   
 >
 
@@ -21,11 +20,11 @@
     placeholder="Enter Note Content"
     #note="ngModel"
   ></textarea>
-  <app-color-picker  let color of Colors
-[(ngModel)]="color.id"
+  <app-color-picker-form  
+[colorId]="color.id"
 (colorChanged)="onColorChange($event)"
 
-></app-color-picker>
+></app-color-picker-form>
   <div class="icon-container">
 
     <a routerLink="" class="delete-icon">Cancel</a>

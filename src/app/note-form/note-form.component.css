@@ -11,31 +11,34 @@
   background-color: var(--bg-color);
   padding: 3rem;
   border-radius: 1rem;
-  font-family : var(--font-style),
-
+  color: var(--text-color);
+  font-family: var(--font-style);
 }
 
 .note-input {
   background-color: transparent;
   outline: none;
   border: 0px;
-  color: var(--lighter);
+  color: var(--text-color);
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
 .note-input-title {
   font-size: var(--lg);
+  color: var(--text-color);
 }
 
 .note-input:focus {
   background-color: transparent;
   outline: none;
+  color: var(--text-color);
   border: 0px;
 }
 
 .note-text-area {
   font-size: var(--md);
+  color: var(--text-color);
   height: 78%;
   border-top: solid 1px;
 }
@@ -52,12 +55,12 @@
 }
 
 .delete-icon {
-  color: var(--light);
+  color: var(--text-color);
   font-size: var(--lg);
   text-decoration: none;
   cursor: pointer;
   font-family: var(--mono);
-  font-family : var(--font-style),
+  font-family: var(--font-style);
 }
 
 .note-button {
@@ -75,22 +78,22 @@
 }
 
 .done-icon {
-  color: var(--darker);
+  color: var(--text-color);
   font-size: 2rem;
 }
 
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: var(--light);
+  color: var(--text-color);
   opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: var(--light);
+  color: var(--text-color);
 }
 
 ::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: var(--light);
+  color: var(--text-color);
 }

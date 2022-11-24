@@ -1,8 +1,8 @@
-<form class="note-form"
-[style.--bg-color]="color.backgroundColor"
-  
+<form
+  class="note-form"
+  [style.--bg-color]="color.backgroundColor"
+  [style.--text-color]="color.textColor"
 >
-
   <input
     class="note-input note-input-title"
     type="text"
@@ -20,18 +20,15 @@
     placeholder="Enter Note Content"
     #note="ngModel"
   ></textarea>
-  <app-color-picker-form  
-[colorId]="color.id"
-(colorChanged)="onColorChange($event)"
-
-></app-color-picker-form>
+  <app-color-picker-form
+    [colorId]="color.id"
+    (colorChanged)="onColorChange($event)"
+  ></app-color-picker-form>
   <div class="icon-container">
-
     <a routerLink="" class="delete-icon">Cancel</a>
-    
+
     <button (click)="addNote()" class="note-button">
       <i class="material-symbols-outlined done-icon"> done </i>
     </button>
-    
   </div>
 </form>

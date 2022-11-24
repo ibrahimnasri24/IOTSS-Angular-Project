@@ -11,7 +11,7 @@ import { Notes } from 'src/app/model/notes';
   styleUrls: ['./color-picker-form.component.css'],
 })
 export class ColorPickerFormComponent implements OnInit {
-  @Input('colorId') colorId: Number=0;
+  @Input('colorId') colorId: Number = 0;
 
   colors = Colors.getColors();
   maxW: string = '0px';
@@ -30,11 +30,7 @@ export class ColorPickerFormComponent implements OnInit {
   colorChanged: EventEmitter<Color> = new EventEmitter<Color>();
 
   getColor = (id: Number) => {
-    Colors.getColor(this.colorId);
-    this.colorChanged.emit(
-      Colors.getColors().find((color) => color.id === this.colorId)
-    );
-    
+    this.colorChanged.emit(Colors.getColor(id));
   };
 
   ngOnInit(): void {}

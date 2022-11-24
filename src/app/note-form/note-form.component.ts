@@ -1,14 +1,11 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Color, Colors } from '../model/colors';
-import { Font,Fonts } from '../model/fonts';
+import { Font, Fonts } from '../model/fonts';
 import { Notes } from '../model/notes';
 import { Note } from '../model/note';
 import { ColorPickerFormComponent } from '../Note/color-picker-form/color-picker-form.component';
 import { getLocaleDateFormat } from '@angular/common';
-
-
-
 
 @Component({
   selector: 'app-note-form',
@@ -22,14 +19,14 @@ export class NoteFormComponent implements OnInit {
     '',
     new Date(),
     new Date(),
-  
+
     Colors.getRandomColor(),
-    Fonts.getRandomFont(),
+    Fonts.getRandomFont()
   );
   noteTitle: string = '';
   noteContent: string = '';
-  color: Color= Colors.getRandomColor();
-  font : Font = Fonts.getRandomFont();
+  color: Color = Colors.getRandomColor();
+  font: Font = Fonts.getRandomFont();
 
   constructor(private router: Router) {}
 
@@ -46,13 +43,15 @@ export class NoteFormComponent implements OnInit {
         new Date(),
         new Date(),
         this.color,
-        this.font,
-        
+        this.font
       );
       this.router.navigate(['']);
     }
   };
-  onColorChange(clr : Color) {
+
+  onColorChange(clr: Color) {
+    console.log(clr);
+
     this.color = clr;
   }
 

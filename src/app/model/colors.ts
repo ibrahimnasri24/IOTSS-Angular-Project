@@ -30,13 +30,14 @@ export class Colors {
       Math.floor(Math.random() * Colors.cols.colors.length)
     ];
   };
-  
 
   public static getColors = () => {
     return Colors.cols.colors;
   };
 
   public static getColor = (id: Number) => {
-    return <Color>Colors.cols.colors.find((col) => col.id === id);
+    console.log(id);
+
+    return <Color>Colors.cols.colors.find((col) => col.id == id);
   };
 }

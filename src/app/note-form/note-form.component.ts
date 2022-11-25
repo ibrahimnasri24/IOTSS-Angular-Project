@@ -6,6 +6,7 @@ import { Notes } from '../model/notes';
 import { Note } from '../model/note';
 import { ColorPickerFormComponent } from '../Note/color-picker-form/color-picker-form.component';
 import { getLocaleDateFormat } from '@angular/common';
+import { FontPickerFormComponent } from '../Note/font-picker-form/font-picker-form.component';
 
 @Component({
   selector: 'app-note-form',
@@ -33,8 +34,9 @@ export class NoteFormComponent implements OnInit {
   addNote = () => {
     console.log(Colors.getColor(this.color.id));
     this.color = Colors.getColor(this.color.id);
+    this.font = Fonts.getFont(this.font.id)
     console.log(this.color);
-
+    console.log(this.font);
     if (this.noteTitle == '') {
     } else {
       Notes.AddNote(
@@ -54,6 +56,9 @@ export class NoteFormComponent implements OnInit {
 
     this.color = clr;
   }
-
+  onFontChange(ft :Font){
+    console.log(ft);
+    this.font=ft ;
+  }
   ngOnInit(): void {}
 }

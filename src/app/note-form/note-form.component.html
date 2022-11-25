@@ -2,6 +2,7 @@
   class="note-form"
   [style.--bg-color]="color.backgroundColor"
   [style.--text-color]="color.textColor"
+  [style.--test-style]="font.name"
 >
   <input
     class="note-input note-input-title"
@@ -24,6 +25,10 @@
     [colorId]="color.id"
     (colorChanged)="onColorChange($event)"
   ></app-color-picker-form>
+  <app-font-picker-form>
+    [fontId]="font.id"
+    (fontChanged)="onFontChange($event)"
+  </app-font-picker-form>
   <div class="icon-container">
     <a routerLink="" class="delete-icon">Cancel</a>
 

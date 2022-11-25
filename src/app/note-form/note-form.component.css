@@ -16,6 +16,7 @@
 }
 
 .note-input {
+  font-family: var(--font-style);
   background-color: transparent;
   outline: none;
   border: 0px;
@@ -25,6 +26,7 @@
 }
 
 .note-input-title {
+  font-family: var(--font-style);
   font-size: var(--lg);
   color: var(--text-color);
 }
@@ -37,6 +39,7 @@
 }
 
 .note-text-area {
+  font-family: var(--font-style);
   font-size: var(--md);
   color: var(--text-color);
   height: 78%;
@@ -86,15 +89,18 @@
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: var(--text-color);
+  font-family: var(--font-style);
   opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: var(--text-color);
+  font-family: var(--font-style);
 }
 
 ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: var(--text-color);
+  font-family: var(--font-style);
 }

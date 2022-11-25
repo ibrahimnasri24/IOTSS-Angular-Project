@@ -11,6 +11,7 @@ import { AddNoteComponent } from './add-note/add-note.component';
 import { ColorPickerComponent } from './Note/color-picker/color-picker.component';
 import { FontPickerComponent } from './Note/font-picker/font-picker.component';
 import { ColorPickerFormComponent } from './Note/color-picker-form/color-picker-form.component';
+import { FontPickerFormComponent } from './Note/font-picker-form/font-picker-form.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { ColorPickerFormComponent } from './Note/color-picker-form/color-picker-
     NotesContainerComponent,
     AddNoteComponent,
     ColorPickerComponent,
-    FontPickerComponent,ColorPickerFormComponent
+    FontPickerComponent,ColorPickerFormComponent,FontPickerFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

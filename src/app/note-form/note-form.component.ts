@@ -58,7 +58,7 @@ export class NoteFormComponent implements OnInit {
   }
   onFontChange(ft: Font) {
     console.log(ft);
-    this.font = Fonts.getFont(0);
+    this.font = ft;
   }
   ngOnInit(): void {}
 }

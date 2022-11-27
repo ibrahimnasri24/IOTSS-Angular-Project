@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Fonts,Font } from 'src/app/model/fonts';
+import { Fonts, Font } from 'src/app/model/fonts';
 import { Note } from 'src/app/model/note';
 import { Notes } from 'src/app/model/notes';
 
@@ -19,9 +19,9 @@ export class FontPickerFormComponent implements OnInit {
   fontChanged: EventEmitter<Font> = new EventEmitter<Font>();
 
   getFont = () => {
-    // i tried to take a parameter id but it didnt work i tried this other method it also didnt work 
-    (this.fontId+ 1) % Fonts.fontCount;
-    this.fontChanged.emit(Fonts.getFont((this.fontId+ 1) % Fonts.fontCount));
+    // i tried to take a parameter id but it didnt work i tried this other method it also didnt work
+    console.log((this.fontId + 1) % Fonts.fontCount);
+    this.fontChanged.emit(Fonts.getFont((this.fontId + 1) % Fonts.fontCount));
   };
   ngOnInit(): void {}
 }

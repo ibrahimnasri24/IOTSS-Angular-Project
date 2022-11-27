@@ -1,9 +1,7 @@
 .container {
   background-color: transparent;
   border: none;
-  position: absolute;
-  bottom: 1.5rem;
-  right: 6rem;
+  position: relative;
   color: var(--text-color);
   display: flex;
   padding: 1rem;

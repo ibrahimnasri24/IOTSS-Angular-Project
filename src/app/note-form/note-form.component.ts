@@ -34,7 +34,7 @@ export class NoteFormComponent implements OnInit {
   addNote = () => {
     console.log(Colors.getColor(this.color.id));
     this.color = Colors.getColor(this.color.id);
-    this.font = Fonts.getFont(this.font.id)
+    this.font = Fonts.getFont(this.font.id);
     console.log(this.color);
     console.log(this.font);
     if (this.noteTitle == '') {
@@ -56,9 +56,9 @@ export class NoteFormComponent implements OnInit {
 
     this.color = clr;
   }
-  onFontChange(ft :Font){
+  onFontChange(ft: Font) {
     console.log(ft);
-    this.font=ft ;
+    this.font = Fonts.getFont(0);
   }
   ngOnInit(): void {}
 }

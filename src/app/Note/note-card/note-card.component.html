@@ -1,4 +1,5 @@
 <div
+  [ngClass]="deleting == true ? 'deleting' : ''"
   class="note-card note-card-w"
   [ngClass]="editingMode == true ? 'note-card-editing' : ''"
   [style.--bg-color]="note.color.backgroundColor"

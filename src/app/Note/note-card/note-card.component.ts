@@ -26,6 +26,7 @@ export class NoteCardComponent implements OnInit {
   noteDeleted: EventEmitter<Note[]> = new EventEmitter<Note[]>();
 
   editingMode: Boolean = false;
+  deleting: Boolean = false;
 
   editON = () => {
     this.editingMode = true;
@@ -37,8 +38,11 @@ export class NoteCardComponent implements OnInit {
   };
 
   delete = (id: Number) => {
-    Notes.deleteNote(id);
-    this.noteDeleted.emit(Notes.getNotes());
+    this.deleting = true;
+    setTimeout(() => {
+      Notes.deleteNote(id);
+      this.noteDeleted.emit(Notes.getNotes());
+    }, 500);
   };
 
   onColorChange(nt: Note) {

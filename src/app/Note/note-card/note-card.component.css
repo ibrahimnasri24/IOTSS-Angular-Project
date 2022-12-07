@@ -13,6 +13,7 @@
 
 input {
   font-family: var(--font-style);
+  padding-right: 1rem;
 }
 
 textarea {
@@ -71,6 +72,10 @@ textarea {
   padding: 1rem;
   font-size: var(--lg);
   cursor: pointer;
+}
+
+.deleting {
+  scale: 0;
 }
 
 @media only screen and (max-width: 980px) {

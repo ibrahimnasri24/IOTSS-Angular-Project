@@ -4,7 +4,7 @@
   flex-direction: column;
   width: 60%;
   height: 70vh;
-  margin-top: 5%;
+  margin-top: 2%;
   margin-bottom: auto;
   margin-right: auto;
   margin-left: auto;
@@ -14,6 +14,40 @@
   border-radius: 1rem;
   color: var(--text-color);
   font-family: var(--font-style);
+}
+
+@keyframes wiggle {
+  0% {
+    transform: translateX(0rem);
+  }
+  80% {
+    transform: translateX(0rem);
+  }
+  85% {
+    transform: translateX(1rem);
+  }
+  95% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+}
+
+.allContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+  font-family: "Courier New", Courier, monospace;
+  color: red;
+}
+
+.validationError {
+  border: solid 5px;
+  border-color: red;
+  animation: wiggle 0.7s;
 }
 
 .note-input {
@@ -112,4 +146,27 @@
   /* Microsoft Edge */
   color: var(--text-color);
   font-family: var(--font-style);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+  border: solid 1px;
+  border-radius: 999px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--text-color);
+  border-radius: 999px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-color);
 }

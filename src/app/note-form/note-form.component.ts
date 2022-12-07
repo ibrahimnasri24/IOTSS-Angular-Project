@@ -29,6 +29,8 @@ export class NoteFormComponent implements OnInit {
   color: Color = Colors.getRandomColor();
   font: Font = Fonts.getRandomFont();
 
+  noTitle: Boolean = false;
+
   constructor(private router: Router) {}
 
   addNote = () => {
@@ -38,6 +40,10 @@ export class NoteFormComponent implements OnInit {
     console.log(this.color);
     console.log(this.font);
     if (this.noteTitle == '') {
+      this.noTitle = true;
+      setTimeout(() => {
+        this.noTitle = false;
+      }, 3000);
     } else {
       Notes.AddNote(
         this.noteTitle,

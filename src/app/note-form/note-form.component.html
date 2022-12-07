@@ -1,41 +1,44 @@
-<form
-  class="note-form"
-  [style.--bg-color]="color.backgroundColor"
-  [style.--text-color]="color.textColor"
-  [style.--font-style]="font.name"
->
-  <input
-    class="note-input note-input-title"
-    type="text"
-    name="title"
-    [(ngModel)]="noteTitle"
-    required
-    placeholder="Enter Title"
-    #title="ngModel"
-  />
-  <textarea
-    class="note-input note-text-area"
-    type="text"
-    name="note"
-    [(ngModel)]="noteContent"
-    placeholder="Enter Note Content"
-    #note="ngModel"
-  ></textarea>
-  <div class="controls-container">
-    <app-color-picker-form
-      [colorId]="color.id"
-      (colorChanged)="onColorChange($event)"
-    ></app-color-picker-form>
-    <app-font-picker-form
-      [fontId]="font.id"
-      (fontChanged)="onFontChange($event)"
-    ></app-font-picker-form>
-  </div>
-  <div class="icon-container">
-    <a routerLink="" class="delete-icon">Cancel</a>
-
-    <button (click)="addNote()" class="note-button">
-      <i class="material-symbols-outlined done-icon"> done </i>
-    </button>
-  </div>
-</form>
+<div class="allContainer">
+  <div *ngIf="noTitle">You should at least add a title</div>
+  <form
+    [ngClass]="noTitle == true ? 'validationError' : ''"
+    class="note-form"
+    [style.--bg-color]="color.backgroundColor"
+    [style.--text-color]="color.textColor"
+    [style.--font-style]="font.name"
+  >
+    <input
+      class="note-input note-input-title"
+      type="text"
+      name="title"
+      [(ngModel)]="noteTitle"
+      required
+      placeholder="Enter Title"
+      #title="ngModel"
+    />
+    <textarea
+      class="note-input note-text-area"
+      type="text"
+      name="note"
+      [(ngModel)]="noteContent"
+      placeholder="Enter Note Content"
+      #note="ngModel"
+    ></textarea>
+    <div class="controls-container">
+      <app-color-picker-form
+        [colorId]="color.id"
+        (colorChanged)="onColorChange($event)"
+      ></app-color-picker-form>
+      <app-font-picker-form
+        [fontId]="font.id"
+        (fontChanged)="onFontChange($event)"
+      ></app-font-picker-form>
+    </div>
+    <div class="icon-container">
+      <a routerLink="" class="delete-icon">Cancel</a>
+      <button (click)="addNote()" class="note-button">
+        <i class="material-symbols-outlined done-icon"> done </i>
+      </button>
+    </div>
+  </form>
+</div>

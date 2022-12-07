@@ -1,17 +1,21 @@
 const fontPalette = [
   { id: 0, name: 'Sofia, serif' },
-  { id: 1, name: 'Arial, Helvetica, sans-serif' },
-  { id: 2, name: "'Courier New', Courier, monospace" },
+  { id: 1, name: 'Zen Dots, cursive' },
+  { id: 2, name: 'La Belle Aurore , cursive' },
   {
     id: 3,
-    name: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif",
+    name: 'Roboto Mono, monospace',
+  },
+  {
+    id: 4,
+    name: 'Nunito, sans-serif',
   },
 ];
 
 export class Font {
   constructor(public id: number, public name: string) {
-    this.id= id ;
-    this.name = name
+    this.id = id;
+    this.name = name;
   }
 }
 

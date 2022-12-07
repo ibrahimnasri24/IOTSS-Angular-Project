@@ -9,6 +9,7 @@
   margin-right: auto;
   margin-left: auto;
   background-color: var(--bg-color);
+  transition: all 0.5s;
   padding: 3rem;
   border-radius: 1rem;
   color: var(--text-color);

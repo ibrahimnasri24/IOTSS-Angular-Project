@@ -3,9 +3,7 @@
   border: none;
   color: var(--text-color);
   display: flex;
-  bottom: 0px;
-  right: 0px;
-  padding: 1rem;
+  padding-top: 0.5rem;
   gap: 0.25rem;
   flex-direction: row-reverse;
   cursor: pointer;
